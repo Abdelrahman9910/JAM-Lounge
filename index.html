@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JAM Lounge</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+  <body>
+    <header>
+      <div class="overlay"></div>
+      <div class="bg-container"></div>
+
+      <div class="logo">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <img src="./images/Asset 4@4x.png" alt="Restaurant Logo"
+        /></a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact-us">Contact Us</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li>
+              <button
+                id="book-now-btn"
+                onclick="window.location.href='reservation.php'"
+              >
+                Book Now
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="side-nav">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact-us">Contact Us</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="#book-now" class="book-now">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+    <section id="about" class="fade-up">
+      <h2>About Us</h2>
+      <p>
+        Welcome to our restaurant, where we serve delicious meals made with the
+        freshest ingredients. Our chefs have years of experience creating
+        culinary masterpieces that will delight your taste buds.
+      </p>
+    </section>
+    
+    <section id="animated-section" class="animated-section">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="left-content content-box">
+            <h2>jazzing</h2>
+                <p>Founded in 2010, JAM Lounge has been serving exceptional culinary experiences with a focus on fresh, locally-sourced ingredients and innovative flavors that delight the senses.</p>
+                <button class="learn-more-btn">Learn More</button>
+          </div>
+          <div class="right-content content-box">
+            <span
+              >JAZZIN’ <br />
+              AROUND TOWN</span
+            >
+            <!-- <h2>Our Philosophy</h2>
+                <p>We believe that great food brings people together. Our chefs combine traditional techniques with modern creativity to deliver unforgettable dining experiences in a warm, inviting atmosphere.</p>
+                <button class="learn-more-btn">Our Values</button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fade-section" class="fade-section">
+      <div class="fade-content">
+        <h2>Discover Our Exclusive Menu</h2>
+        <p>
+          Experience culinary excellence with our carefully crafted dishes made
+          from the finest ingredients sourced locally and internationally.
+        </p>
+        <a href="./menu.html" class="cta-button">View Full Menu</a>
+      </div>
+    </section>
+
+    <section class="review-slider">
+      <div class="slider">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <p class="quote">
+              "Breakfast with a view of Mokattam, Cairo from a rooftop /
+              balcony. Breakfast is served 9am - 1.30pm. We ordered the Jam
+              breakfast to share, eggs bacon benedict, turkey club sandwich and
+              Croque Madame. All dishes were very tasty and fresh. We also
+              ordered tea, latte and two milkshakes. Highly recommend. They need
+              to improve on service speed however as our breakfast took a very
+              long time to come out. The Manager served us himself and he was
+              extremely polite and courteous towards us.."
+            </p>
+            <p class="name">– Amy.</p>
+            <p class="stars">★★★★★</p>
+          </div>
+          <div class="slide">
+            <p class="quote">
+              "The panoramic view is amazing , the food is very delicious ,
+              every single dish is impressive and outstanding,the service is
+              warm and professional, the menu has so many items you will
+              definitely find your taste."
+            </p>
+            <p class="name">– Youmna Kareem.</p>
+            <p class="stars">★★★★★</p>
+          </div>
+          <div class="slide">
+            <p class="quote">
+              "The food was amazing on a another level , hygiene 100/10 Overall
+              experience 10/10 View is perfect in outdoor area Romantic dates
+              with light jazz music so its perfect place for couples and dates.
+              Definitely coming back!"
+            </p>
+            <p class="name">– Nada Tarek.</p>
+            <p class="stars">★★★★★</p>
+          </div>
+          <div class="slide">
+            <p class="quote">
+              "Very good quality of food, nice atmospher with an amazing cairo
+              view. Stuff is very friendly and the beverages were good as well.
+              A great place for family dinners."
+            </p>
+            <p class="name">– Nourhan Amr.</p>
+            <p class="stars">★★★★★</p>
+            <!-- ★★★★☆ -->
+          </div>
+          <div class="slide">
+            <p class="quote">
+              "Tomato soup was great, salad was very good and the coffee was
+              perfect , service is good but can be better regarding the
+              tableware and setting, staff were really friendly and polite .
+              Would definitely go again ."
+            </p>
+            <p class="name">– Sameera Kayyali.</p>
+            <p class="stars">★★★★☆</p>
+          </div>
+        </div>
+        <button class="nav-btn" id="prev">&#10094;</button>
+        <button class="nav-btn" id="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section id="book-now">
+        <button onclick="window.location.href='reservation.php'">
+            Make a Reservation
+          </button>
+      <p>
+        Ready to experience our culinary delights? Book your table now and enjoy
+        an unforgettable dining experience with us.
+      </p>
+    </section>
+
+    <footer class="footer" id="Contact-us">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/i5AeqNNQHsgTZhUs6" target="_blank">
+                          Al Ahram, Al-Mokattam St, Cairo Governorate 11571
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+12125551234">+201553774796</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Open: 09:00 AM - 02:00 AM</span>
+                    </li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <!-- Embedded Google Map -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.662713026559!2d31.2773979!3d30.017839799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583992aee05ebb%3A0x904885b2869f6cb2!2sJAM%20Lounge!5e0!3m2!1sen!2seg!4v1763170781199!5m2!1sen!2seg" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 JAM Restaurant. All rights reserved. | Designed with Abdelrahman Said</p>
+        </div>
+    </footer>
+    
+
+    <button onclick="window.location.href='reservation.php'">
+      Make a Reservation
+    </button>
+    <button onclick="window.location.href='admin_login.php'">
+      Admin Login
+    </button>
+    <script src="./script.js"></script>
+  </body>
+</html>
