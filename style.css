@@ -339,6 +339,7 @@ button:hover {
   position: relative;
   margin-bottom: 0px !important;
   padding: 0px !important;
+  overflow: hidden !important;
 }
 
 .container {
