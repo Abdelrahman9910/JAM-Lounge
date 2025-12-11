@@ -52,7 +52,7 @@ header {
 /* Logo styling - fixed position */
 .logo {
   position: fixed;
-  top: 20px;
+  top: 1.5%;
   left: 20px;
   z-index: 100;
 }
@@ -91,7 +91,7 @@ header {
 .navbar nav a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 29px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   transition: color 0.3s ease;
 }
@@ -107,7 +107,7 @@ header {
   color: white;
   padding: 8px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 29px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -385,9 +385,6 @@ button:hover {
 
 .right-content {
   transform: translateX(150px) translateY(60px) scale(0.95);
-  /* background-image: url(./images/jazzin.jpg);
-  background-position: center;
-  background-size: cover; */
   background-color: #2f5f6e;
   color: white;
   height: 50vh;
@@ -609,7 +606,7 @@ button:hover {
   right: 10px;
 }
 #book-now {
-  background: linear-gradient(135deg, #1a2f3b 0%, #2c5364 100%);
+  background: #010d48;
   color: white;
   padding: 80px 30px;
   text-align: center;
@@ -688,7 +685,7 @@ button:hover {
   animation: pulse 2s infinite;
 }
 .footer {
-  background: linear-gradient(135deg, #1a2f3b 0%, #2c5364 100%);
+  background: #010d48;
   color: white;
   width: 100%;
   overflow: hidden;
@@ -860,7 +857,7 @@ button:hover {
 }
 .box-2 {
   width: 80%;
-  flex: 10;
+  flex: 33;
 }
 .box-2-child {
   display: flex;
@@ -913,7 +910,7 @@ button:hover {
   border-left: 2px solid #b69b4d;
 }
 .head-imgs2 {
-  flex: 10;
+  flex: 33;
   background-image: url(./images/menu-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -927,7 +924,7 @@ button:hover {
   border-bottom: 2px solid #b69b4d;
 }
 .menu-col2 {
-  flex: 10;
+  flex: 33;
   width: 80%;
   border-bottom: 2px solid #b69b4d;
 }
@@ -953,13 +950,13 @@ button:hover {
   gap: 6rem;
   padding-left: 2rem;
 }
-.sides-ul {
-  margin: 0rem 0rem 0rem 5%;
-  width: 100%;
-}
-.sides-ul-pasta {
-  margin: 0rem 0rem 0rem 9%;
-  width: 100%;
+.img-speration {
+  height: 50vh;
+  background-image: url(./images/images.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem 1.5rem;
 }
 .gold-border {
   width: 100%;
@@ -975,11 +972,16 @@ button:hover {
   justify-content: space-between;
   padding: 0rem 1.5rem 1rem;
   margin-top: 1rem;
-  border-bottom: 2px solid #b69b4d;
+  /* border-bottom: 2px solid #b69b4d; */
 }
 .food-wrap {
   display: flex;
   flex-direction: column;
+}
+.sides-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0rem;
 }
 .food-desc {
   font-size: 1rem;
@@ -1216,12 +1218,11 @@ input {
   }
   .box-2-left {
     width: 23%;
-    display: flex;
+    display: none;
     align-items: center;
   }
-  .box-2-left span,
   .box-2-child span {
-    font-size: 0.5rem;
+    font-size: 0.85rem;
   }
   .box-2-child2 a {
     display: none;
@@ -1257,28 +1258,25 @@ input {
   .item-price {
     font-size: 14px;
     width: 27%;
-}
-.food-wrap
- {
+  }
+  .food-wrap {
     width: 70%;
- }
- .food-cat div {
-  flex-direction: column;
-  font-size: 12px;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  padding-left: 0.5rem;
-  width: 98%;
- }
- .sides-ul {
-  margin: 0.5rem 0rem 0.5rem 9%;
-  width: fit-content;
-}
-.sides-ul-pasta
- {
-    margin: 0.5rem 0rem 0rem 9%;
-    width: 91%;
-}
+  }
+  .sides-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  .img-speration {
+    height: 20vh;
+  }
+  .food-cat div {
+    flex-direction: column;
+    font-size: 12px;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    width: 98%;
+  }
 }
 @media (max-width: 480px) {
   .animated-section {
