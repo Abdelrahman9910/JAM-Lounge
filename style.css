@@ -15,6 +15,7 @@ body {
   padding: 0;
   background-color: black;
 }
+
 .Menu-body {
   background-color: #ffffff;
 }
@@ -265,15 +266,17 @@ section p {
 }
 
 /* Buttons at bottom of page */
-button {
-  padding: 12px 24px;
+.submit-btn {
+  padding: 1rem;
   margin: 10px;
-  background-color: #333;
+  background-color: #b69b4d;
   color: white;
   border: none;
-  border-radius: 5px;
+  /* padding: 3rem; */
+  border-radius: 80px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 2rem;
+  width: 30%;
   transition: background-color 0.3s ease;
 }
 
@@ -468,7 +471,7 @@ button:hover {
   justify-content: center;
   padding: 80px 20px;
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("./images/Screenshot\ 2026-02-04\ 212236.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -939,10 +942,12 @@ button:hover {
   font-weight: 700;
   color: #b69b4d;
   padding: 1rem 0rem 0.5rem 1rem;
-  /* border-bottom: 2px solid #b69b4d; */
   display: flex;
-  flex-direction: column;
   width: 100%;
+}
+.food-ar{
+  flex-direction: row-reverse;
+  padding: 0px 20px 10px 0px;
 }
 .food-cat div {
   font-size: 1rem;
@@ -951,12 +956,7 @@ button:hover {
   padding-left: 2rem;
 }
 .img-speration {
-  height: 50vh;
-  background-image: url(./images/images.jfif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0rem 1.5rem;
+  display: none;
 }
 .gold-border {
   width: 100%;
@@ -974,6 +974,15 @@ button:hover {
   margin-top: 1rem;
   /* border-bottom: 2px solid #b69b4d; */
 }
+.ar-item{
+    flex-direction: row-reverse;
+}
+.ar-food{
+    align-items: end !important;
+}
+.ar-food span{
+  text-align: end !important;
+}
 .food-wrap {
   display: flex;
   flex-direction: column;
@@ -988,6 +997,28 @@ button:hover {
   color: #b69b4d;
   margin-top: 10px;
 }
+.date-wrapper {
+  position: relative;
+  width: 30%;
+}
+.date-wrapper input{
+  position: relative;
+  width: 100%;
+}
+.date-status {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ff4d4d;
+  min-height: 20px;
+  pointer-events: none;
+}
+
+.desc-ar{
+  text-align: end;
+}
 .item-price {
   display: flex;
   align-items: center;
@@ -997,13 +1028,10 @@ button:hover {
   margin-top: 5px;
 }
 .reservation-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #002856;
+  background-color: #010d48 !important;
   color: #b69b4d;
 }
+
 /* Dropdown container */
 .dropdown {
   position: relative;
@@ -1060,9 +1088,9 @@ button:hover {
   background-color: #0028562b;
 }
 .reservation-logo {
-  width: 10rem;
+  width: 20rem;
   display: inline-block;
-  margin: 1.5rem 0rem 0rem 1rem;
+  margin: 2.5rem 0rem 0rem 2rem;
 }
 .reservation-logo img {
   width: 100%;
@@ -1070,14 +1098,15 @@ button:hover {
 .reservation-head {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
-  margin: 2rem;
+  font-size: 5rem;
+  margin: 6rem 0rem 8rem;
 }
 .reservation-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
 }
 label {
   font-size: 2rem;
@@ -1085,10 +1114,29 @@ label {
 }
 input {
   border: 2px solid gold;
-  width: 11%;
-  border-radius: 30px;
+  width: 30%;
+  border-radius: 80px;
   padding: 1rem;
+  font-size: 2rem;
 }
+.comment-sec {
+  border: 2px solid gold;
+  font-size: 2rem;
+  width: 30%;
+  border-radius: 124px;
+  padding: 1rem;
+  line-height: 15px;
+  text-align: center;
+}
+#area {
+  text-align: center;
+  width: 30%;
+  border: 2px solid #ffd700;
+  border-radius: 80px;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
@@ -1131,7 +1179,7 @@ input {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .fade-content {
     padding: 40px 25px;
     margin: 0 20px;
@@ -1211,6 +1259,81 @@ input {
   .content-box p {
     font-size: 1rem;
   }
+  input {
+    border: 2px solid gold;
+    width: 80%;
+    border-radius: 80px;
+    padding: 3rem;
+    font-size: 3rem;
+  }
+  #area {
+    text-align: center;
+    width: 80%;
+    border: 2px solid #ffd700;
+    border-radius: 80px;
+    padding: 3rem;
+    font-size: 3rem;
+  }
+  .comment-sec {
+    border: 2px solid gold;
+    font-size: 3rem;
+    width: 80%;
+    border-radius: 124px;
+    padding: 3rem;
+    line-height: 22px;
+    text-align: center;
+  }
+  .submit-btn {
+    padding: 3rem;
+    margin: 10px;
+    background-color: #b69b4d;
+    color: white;
+    border: none;
+    /* padding: 3rem; */
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 3rem;
+    width: 80%;
+    transition: background-color 0.3s ease;
+  }
+  .img-speration {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0rem 1.5rem;
+    display: block;
+  }
+  .pasta-img {
+    background-image: url(./images/download\ \(3\).jfif);
+  }
+  .pizza-img {
+    background-image: url(./images/download\ \(2\).jfif);
+  }
+  .main-img {
+    background-image: url(./images/4.png);
+  }
+  .sandwich-img {
+    background-image: url(./images/download\ \(1\).jfif);
+  }
+  .soups-img {
+    background-image: url(./images/download.jfif);
+  }
+  .salads-img {
+    background-image: url(./images/1.png);
+  }
+  .appetizers-img {
+    background-image: url(./images/4.png);
+  }
+  .dessert-img {
+    background-image: url(./images/5.png);
+  }
+  .date-wrapper {
+    width: 80%;
+}
+.comment-sec{
+  font-size: 1.2rem;
+}
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .box-2-child {
@@ -1266,9 +1389,6 @@ input {
     width: 100%;
     text-align: center;
   }
-  .img-speration {
-    height: 20vh;
-  }
   .food-cat div {
     flex-direction: column;
     font-size: 12px;
@@ -1276,6 +1396,43 @@ input {
     margin-top: 0.5rem;
     padding-left: 0.5rem;
     width: 98%;
+  }
+  input {
+    border: 2px solid gold;
+    width: 80%;
+    border-radius: 80px;
+    padding: 3rem;
+    font-size: 3rem;
+  }
+  #area {
+    text-align: center;
+    width: 80%;
+    border: 2px solid #ffd700;
+    border-radius: 80px;
+    padding: 3rem;
+    font-size: 3rem;
+  }
+  .comment-sec {
+    border: 2px solid gold;
+    font-size: 3rem;
+    width: 80%;
+    border-radius: 124px;
+    padding: 3rem;
+    line-height: 22px;
+    text-align: center;
+  }
+  .submit-btn {
+    padding: 3rem;
+    margin: 10px;
+    background-color: #b69b4d;
+    color: white;
+    border: none;
+    /* padding: 3rem; */
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 3rem;
+    width: 80%;
+    transition: background-color 0.3s ease;
   }
 }
 @media (max-width: 480px) {
@@ -1300,5 +1457,45 @@ input {
 
   .fade-content h2 {
     font-size: 1.8rem;
+  }
+  
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  .img-speration {
+    height: 40vh;
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .img-speration {
+    height: 53vh;
+  }
+}
+@media (min-width: 320px) and (max-width: 769px) {
+  .pasta-img {
+    background-image: url(./images/download\ \(3\).jfif);
+  }
+  .pizza-img {
+    background-image: url(./images/download\ \(2\).jfif);
+  }
+  .breakfast-img {
+    background-image: url(./images/download\ \(2\).jfif);
+  }
+  .main-img {
+    background-image: url(./images/4.png);
+  }
+  .sandwiches-img {
+    background-image: url(./images/download\ \(1\).jfif);
+  }
+  .soups-img {
+    background-image: url(./images/download.jfif);
+  }
+  .salads-img {
+    background-image: url(./images/1.png);
+  }
+  .appetizers-img {
+    background-image: url(./images/4.png);
+  }
+  .dessert-img {
+    background-image: url(./images/5.png);
   }
 }

@@ -3,32 +3,49 @@ include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
-    $email = $_POST['email'];
     $phone = $_POST['phone'];
     $date = $_POST['date'];
     $time = $_POST['time'];
     $guests = $_POST['guests'];
     $area = $_POST['area'];
+    $comment = $_POST['comment'] ?? '';
 
-    // Validation
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<script>alert('Please enter a valid email address.');</script>";
-    } elseif (strtotime($date) < strtotime(date('Y-m-d'))) {
-        echo "<script>alert('Please select today or a future date.');</script>";
+    // Validation (NO EMAIL)
+    if (strtotime($date) < strtotime(date('Y-m-d'))) {
+        echo "<script>alert('Please select today or a future date.'); window.location.href='reservation.php';</script>";
+        exit;
     } elseif ((int)date('Hi', strtotime($time)) < 1100 && (int)date('Hi', strtotime($time)) > 100) {
-        echo "<script>alert('Reservation time must be between 11:00 AM and 1:00 AM.');</script>";
+        echo "<script>alert('Reservation time must be between 11:00 AM and 1:00 AM.'); window.location.href='reservation.php';</script>";
+        exit;
     } else {
-        // Insert into database
-        $stmt = $conn->prepare("INSERT INTO reservations (name,email,phone,reservation_date,reservation_time,guests,area) VALUES (?,?,?,?,?,?,?)");
-        $stmt->bind_param("sssssis", $name, $email, $phone, $date, $time, $guests, $area);
+
+        // ✅ NEW: Check if selected day is blocked
+        $check = $conn->prepare("SELECT 1 FROM blocked_dates WHERE blocked_date=? LIMIT 1");
+        $check->bind_param("s", $date);
+        $check->execute();
+        $blocked = $check->get_result();
+
+        if ($blocked->num_rows > 0) {
+            echo "<script>alert('Reservations are closed for this day. Please choose another date.'); window.location.href='reservation.php';</script>";
+            exit;
+        }
+
+        // ✅ Insert into database (NO EMAIL)
+        $stmt = $conn->prepare("INSERT INTO reservations 
+        (name,phone,reservation_date,reservation_time,guests,area,comment) 
+        VALUES (?,?,?,?,?,?,?)");
+
+        $stmt->bind_param("ssssiss", $name, $phone, $date, $time, $guests, $area, $comment);
 
         if ($stmt->execute()) {
             echo "<script>alert('Reservation made successfully!'); window.location.href='index.html';</script>";
         } else {
-            echo "<script>alert('Error making reservation.');</script>";
+            echo "<script>alert('Error making reservation.'); window.location.href='reservation.php';</script>";
         }
     }
 }
+?>
+
 ?>
 
 <!DOCTYPE html>
@@ -109,8 +126,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <label>Name:</label><br>
   <input type="text" name="name" required><br>
 
-  <label>Email:</label><br>
-  <input type="email" name="email" required><br>
 
   <label>Phone Number:</label><br>
   <input type="text" name="phone" required><br>

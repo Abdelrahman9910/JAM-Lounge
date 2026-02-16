@@ -7,15 +7,19 @@ $row = $result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
-    $email = $_POST['email'];
     $phone = $_POST['phone'];
     $date = $_POST['date'];
     $time = $_POST['time'];
     $guests = $_POST['guests'];
     $area = $_POST['area'];
+    $comment = $_POST['comment'];
 
-    $stmt = $conn->prepare("UPDATE reservations SET name=?, email=?, phone=?, reservation_date=?, reservation_time=?, guests=?, area=? WHERE id=?");
-    $stmt->bind_param("sssssssi", $name, $email, $phone, $date, $time, $guests, $area, $id);
+    $stmt = $conn->prepare("UPDATE reservations 
+    SET name=?, email=?, phone=?, reservation_date=?, reservation_time=?, guests=?, area=?, comment=? 
+    WHERE id=?");
+    
+    $stmt->bind_param("ssssssssi", $name, $phone, $date, $time, $guests, $area, $comment, $id);
+    
 
     if ($stmt->execute()) {
         echo "<script>alert('Reservation updated successfully!'); window.location.href='admin.php';</script>";
@@ -37,9 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <label>Name:</label><br>
   <input type="text" name="name" value="<?= $row['name'] ?>" required><br>
 
-  <label>Email:</label><br>
-  <input type="email" name="email" value="<?= $row['email'] ?>" required><br>
-
   <label>Phone:</label><br>
   <input type="text" name="phone" value="<?= $row['phone'] ?>" required><br>
 
@@ -57,6 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <option value="indoor" <?= ($row['area'] == 'indoor') ? 'selected' : '' ?>>Indoor</option>
     <option value="outdoor" <?= ($row['area'] == 'outdoor') ? 'selected' : '' ?>>Outdoor</option>
   </select><br><br>
+  <label>Comment:</label><br>
+<textarea name="comment" rows="3"><?= $row['comment'] ?></textarea><br><br>
 
   <button type="submit">Update</button>
 </form>

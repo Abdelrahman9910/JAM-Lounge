@@ -4,7 +4,6 @@ USE jam_lounge;
 CREATE TABLE reservations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL,
   phone VARCHAR(20) NOT NULL,
   reservation_date DATE NOT NULL,
   reservation_time TIME NOT NULL,
