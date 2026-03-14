@@ -1595,8 +1595,10 @@ div.scrollmenu {
   .logo img {
     height: 40px;
 }
-.locimg{
+#locimg{
   width: 56px !important;
 }
-
+.hamburger{
+    top: 2%;
+ }
 }
