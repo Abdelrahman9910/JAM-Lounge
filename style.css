@@ -1592,5 +1592,11 @@ div.scrollmenu {
     height: 3px;
     background: #d4af37;
   }
-  
+  .logo img {
+    height: 40px;
+}
+.locimg{
+  width: 56px !important;
+}
+
 }
