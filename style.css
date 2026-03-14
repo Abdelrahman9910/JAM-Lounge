@@ -1592,15 +1592,5 @@ div.scrollmenu {
     height: 3px;
     background: #d4af37;
   }
-  .contact-list a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 2.1rem;
-}
-.contact-list i , .clock-img {
-  width: 100px;
-  height: 100px;
-  font-size: 2.1rem;
-}
+  
 }
