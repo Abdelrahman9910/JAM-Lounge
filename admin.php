@@ -1,25 +1,16 @@
 <?php
 session_start();
-include 'config.php';
+require "config.php";
 
-if (!isset($_SESSION['logged_in'])) {
-  $username = $_POST['username'] ?? '';
-  $password = $_POST['password'] ?? '';
-  $query = $conn->prepare("SELECT * FROM admin WHERE username=? AND password=?");
-  $query->bind_param("ss", $username, $password);
-  $query->execute();
-  $result = $query->get_result();
-  if ($result->num_rows > 0) {
-    $_SESSION['logged_in'] = true;
-  } else {
-    echo "<script>alert('Invalid credentials'); window.location.href='admin_login.php';</script>";
+// Protect page
+if (!isset($_SESSION["admin_id"])) {
+    header("Location: admin_login.php");
     exit;
-  }
 }
 
-/* ----------------------------
-   Block/Unblock date logic
------------------------------ */
+
+
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $action = $_POST['action'] ?? '';
   $selectedDate = $_POST['blocked_date'] ?? '';
@@ -114,6 +105,8 @@ $blockedResult = $conn->query("
     <tr>
       <td><?= $c['reservation_date'] ?></td>
       <td><?= $c['total_reservations'] ?></td>
+      
+      
       <td><?= $c['total_guests'] ?></td>
 
     </tr>

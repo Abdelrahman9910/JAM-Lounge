@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style.css?v=20260222-1">
 </head>
 <body class="reservation-body">
 <a href="http://" target="_blank" rel="noopener noreferrer" class="reservation-logo">
@@ -19,7 +19,7 @@
 <form action="reserve.php" method="POST" class="reservation-form">
   <!-- <label>Name:</label><br> -->
    
-  <input type="text" name="name" placeholder="Name" required>
+  <input class="input-style" id="force-input" type="text" name="name" placeholder="Name" required>
   <!-- <label>Email:</label><br> -->
   <!-- <input type="email" name="email" placeholder="Email" required><br> -->
   <!-- <label>Phone Number:</label><br> -->

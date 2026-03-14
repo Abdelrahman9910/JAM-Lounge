@@ -276,7 +276,7 @@ section p {
   border-radius: 80px;
   cursor: pointer;
   font-size: 2rem;
-  width: 30%;
+  width: 70%;
   transition: background-color 0.3s ease;
 }
 
@@ -1000,7 +1000,7 @@ button:hover {
 }
 .date-wrapper {
   position: relative;
-  width: 30%;
+  width: 70%;
 }
 .date-wrapper input{
   position: relative;
@@ -1108,6 +1108,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  width: 100% !important;
 }
 label {
   font-size: 2rem;
@@ -1115,7 +1116,7 @@ label {
 }
 input {
   border: 2px solid gold;
-  width: 30%;
+  width: 70%;
   border-radius: 80px;
   padding: 1rem;
   font-size: 2rem;
@@ -1123,7 +1124,7 @@ input {
 .comment-sec {
   border: 2px solid gold;
   font-size: 2rem;
-  width: 30%;
+  width: 70%;
   border-radius: 124px;
   padding: 1rem;
   line-height: 15px;
@@ -1131,7 +1132,7 @@ input {
 }
 #area {
   text-align: center;
-  width: 30%;
+  width: 70%;
   border: 2px solid #ffd700;
   border-radius: 80px;
   padding: 1rem;
@@ -1201,6 +1202,12 @@ div.scrollmenu {
   z-index: 999999 !important;
   border-radius: 6px;
 }
+.res-hide{
+  display: none !important;
+}
+#force-input{
+  width: 70% !important;
+}
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
@@ -1264,6 +1271,7 @@ div.scrollmenu {
   }
   #book-now {
     padding: 60px 20px;
+    min-height: 20vh !important;
   }
 
   #book-now p {
@@ -1287,7 +1295,7 @@ div.scrollmenu {
     display: none;
   }
   .footer h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   .navbar {
     display: none;
@@ -1326,16 +1334,16 @@ div.scrollmenu {
   .content-box p {
     font-size: 1rem;
   }
-  input {
+  .input-style {
     border: 2px solid gold;
-    width: 80%;
+    width: 70% !important;
     border-radius: 80px;
     padding: 3rem;
     font-size: 3rem;
   }
   #area {
     text-align: center;
-    width: 80%;
+    width: 70% !important;
     border: 2px solid #ffd700;
     border-radius: 80px;
     padding: 3rem;
@@ -1343,8 +1351,8 @@ div.scrollmenu {
   }
   .comment-sec {
     border: 2px solid gold;
-    font-size: 3rem;
-    width: 80%;
+    font-size: 2rem;
+    width: 70% !important;
     border-radius: 124px;
     padding: 3rem;
     line-height: 22px;
@@ -1360,9 +1368,16 @@ div.scrollmenu {
     border-radius: 80px;
     cursor: pointer;
     font-size: 3rem;
-    width: 80%;
+    width: 70% !important;
     transition: background-color 0.3s ease;
   }
+  .footer-content{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    flex-wrap: wrap;
+    padding: 50px 40px;
+    gap: 2rem;
+}
   .img-speration {
     height: 100vh;
     background-position: center;
@@ -1396,7 +1411,7 @@ div.scrollmenu {
     background-image: url(./images/5.png);
   }
   .date-wrapper {
-    width: 80%;
+    width: 80% !important;
 }
 .comment-sec{
   font-size: 1.2rem;
@@ -1467,16 +1482,16 @@ div.scrollmenu {
     padding-left: 0.5rem;
     width: 98%;
   }
-  input {
+  .input-style {
     border: 2px solid gold;
-    width: 80%;
+    width: 80% !important;
     border-radius: 80px;
     padding: 3rem;
     font-size: 3rem;
   }
   #area {
     text-align: center;
-    width: 80%;
+    width: 70% !important;
     border: 2px solid #ffd700;
     border-radius: 80px;
     padding: 3rem;
@@ -1485,7 +1500,7 @@ div.scrollmenu {
   .comment-sec {
     border: 2px solid gold;
     font-size: 3rem;
-    width: 80%;
+    width: 70%;
     border-radius: 124px;
     padding: 3rem;
     line-height: 22px;
@@ -1501,7 +1516,7 @@ div.scrollmenu {
     border-radius: 80px;
     cursor: pointer;
     font-size: 3rem;
-    width: 80%;
+    width: 70% !important;
     transition: background-color 0.3s ease;
   }
 }
@@ -1568,4 +1583,24 @@ div.scrollmenu {
   .dessert-img {
     background-image: url(./images/5.png);
   }
+  .footer h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: #d4af37;
+  }
+  .contact-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 2.1rem;
+}
+.contact-list i , .clock-img {
+  width: 100px;
+  height: 100px;
+  font-size: 2.1rem;
+}
 }

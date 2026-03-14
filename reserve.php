@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
 
-        // ✅ Insert into database (NO EMAIL)
+        
         $stmt = $conn->prepare("INSERT INTO reservations 
         (name,phone,reservation_date,reservation_time,guests,area,comment) 
         VALUES (?,?,?,?,?,?,?)");
@@ -45,9 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

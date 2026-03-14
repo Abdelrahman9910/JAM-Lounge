@@ -1,7 +1,4 @@
-CREATE DATABASE IF NOT EXISTS jam_lounge;
-USE jam_lounge;
-
-CREATE TABLE reservations (
+CREATE TABLE IF NOT EXISTS reservations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   phone VARCHAR(20) NOT NULL,
@@ -12,11 +9,10 @@ CREATE TABLE reservations (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE admin (
+CREATE TABLE IF NOT EXISTS admin (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50) NOT NULL,
   password VARCHAR(255) NOT NULL
 );
 
 INSERT INTO admin (username,password) VALUES ('admin','12345');
-
