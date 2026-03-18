@@ -1378,14 +1378,7 @@ div.scrollmenu {
     padding: 50px 40px;
     gap: 2rem;
 }
-  .img-speration {
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0rem 1.5rem;
-    display: block;
-  }
+
   .pasta-img {
     background-image: url(./images/download\ \(3\).jfif);
   }
@@ -1415,6 +1408,14 @@ div.scrollmenu {
 }
 .comment-sec{
   font-size: 1.2rem;
+}
+.img-speration {
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem 1.5rem;
+  display: block;
 }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1596,7 +1597,7 @@ div.scrollmenu {
     height: 40px;
 }
 #locimg{
-  width: 56px !important;
+  width: 60px !important;
 }
 .hamburger{
     top: 3%;
