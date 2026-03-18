@@ -15,6 +15,11 @@ body {
   padding: 0;
   background-color: black;
 }
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .Menu-body {
   background-color: #ffffff;
@@ -1413,7 +1418,7 @@ div.scrollmenu {
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   margin: 0rem 1.5rem;
   display: block;
 }
@@ -1548,12 +1553,12 @@ div.scrollmenu {
 }
 @media (min-width: 320px) and (max-width: 375px) {
   .img-speration {
-    height: 40vh;
+    height: 55vh;
   }
 }
 @media (min-width: 375px) and (max-width: 425px) {
   .img-speration {
-    height: 53vh;
+    height: 55vh;
   }
 }
 @media (min-width: 320px) and (max-width: 769px) {
@@ -1583,6 +1588,12 @@ div.scrollmenu {
   }
   .dessert-img {
     background-image: url(./images/5.png);
+  }
+  .Drinks-img{
+    background-image: url(./images/5.png);
+  }
+  .Desserts-img{
+    background-image: url(./images/4.png);
   }
   .footer h3::after {
     content: "";
